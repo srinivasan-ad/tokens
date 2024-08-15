@@ -7,6 +7,8 @@ const USERS = [
   { name: "srinivasan-ad", password: "12345" },
   { name: "ManojaD2004", password: "1234" },
   { name: "Vilas-cp", password: "123" },
+  { name: "Rahul", password: "12" },
+  { name: "Giridhara", password: "1" },
 ];
 
 const jwtpass = "123456";
