@@ -1,13 +1,12 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
-
 const app = express();
 app.use(express.json());
 
 const USERS = [
   { name: "srinivasan-ad", password: "12345" },
   { name: "ManojaD2004", password: "1234" },
-  { name: "Vilas-cp", password: "123" }
+  { name: "Vilas-cp", password: "123" },
 ];
 
 const jwtpass = "123456";
@@ -26,7 +25,7 @@ app.post("/user", (req, res) => {
 
   if (!userExists(username, password)) {
     return res.status(404).json({
-      message: "User does not exist"
+      message: "User does not exist",
     });
   }
 
@@ -52,7 +51,7 @@ app.get("/verify", (req, res) => {
     return res.json({ user });
   } catch (err) {
     res.status(401).json({
-      message: "Invalid token"
+      message: "Invalid token",
     });
   }
 });
